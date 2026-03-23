@@ -1,5 +1,6 @@
 export const profile = {
   name: "Ram Kothari",
+  image: "",
   role: "Backend Developer | Security Engineer | Learning",
   location: "India",
   email: "ramkothari@gmail.com",
