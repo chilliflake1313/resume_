@@ -1,4 +1,7 @@
 import { profile } from "../data/profile";
+import { MdEmail } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { SiPeerlist } from "react-icons/si";
 
 export default function Sidebar() {
   const initials = profile.name
@@ -24,19 +27,33 @@ export default function Sidebar() {
         )}
       </div>
 
-      <div>
-        <p className="text-sm text-gray-500">Name - {profile.name}</p>
-        <p className="text-sm text-gray-500">Email - {profile.email}</p>
-      </div>
-
-      <div className="flex flex-col gap-2 text-sm text-gray-500">
-        <span>Role - {profile.role}</span>
-        <span>Location - {profile.location}</span>
-        <a href={profile.github} target="_blank" rel="noreferrer">
-          GitHub - {profile.github}
+      <div className="flex items-center gap-4 text-gray-600">
+        <a
+          href={`mailto:${profile.email}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Email"
+          className="transition-colors hover:text-blue-600"
+        >
+          <MdEmail size={24} />
         </a>
-        <a href={profile.Peerlist} target="_blank" rel="noreferrer">
-          Peerlist - {profile.Peerlist}
+        <a
+          href={profile.github}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+          className="transition-colors hover:text-black"
+        >
+          <FaGithub size={22} />
+        </a>
+        <a
+          href={profile.Peerlist}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Peerlist"
+          className="transition-colors hover:text-green-600"
+        >
+          <SiPeerlist size={22} color="#16a34a" />
         </a>
       </div>
     </aside>

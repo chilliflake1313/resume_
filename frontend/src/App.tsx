@@ -2,7 +2,6 @@ import Sidebar from "./components/Sidebar";
 import Section from "./components/Section";
 
 import Bio from "./sections/Bio";
-import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
@@ -16,9 +15,6 @@ export default function App() {
         <main className="flex-1">
           <Section>
             <Bio />
-          </Section>
-          <Section>
-            <About />
           </Section>
           <Section>
             <Experience />
