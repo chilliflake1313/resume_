@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import { profile } from "../data/profile";
 
 function EmailIcon({ className }: { className?: string }) {
@@ -48,6 +50,9 @@ function PeerlistIcon({ className }: { className?: string }) {
 }
 
 export default function Contact() {
+  const [showEmailDialog, setShowEmailDialog] = useState(false);
+  const [copied, setCopied] = useState(false);
+
   const initials = profile.name
     .split(" ")
     .map((part) => part[0])
@@ -55,9 +60,26 @@ export default function Contact() {
     .slice(0, 2)
     .toUpperCase();
 
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      setCopied(true);
+
+      window.setTimeout(() => {
+        setCopied(false);
+      }, 1400);
+    } catch {
+      setCopied(false);
+    }
+  };
+
   return (
     <div>
-      <h3 className="mb-4 text-xl font-semibold text-white">Contact</h3>
+      <TypewriterEffectSmooth
+        words={[{ text: "Contact", className: "text-white" }]}
+        className="mb-4 text-xl font-semibold"
+        cursorClassName="text-cyan-300"
+      />
       <p className="text-slate-300">
         Let&apos;s connect for backend, security, and collaboration opportunities.
       </p>
@@ -85,16 +107,18 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-4 flex items-center gap-4 text-slate-300">
-          <a
-            href={`mailto:${profile.email}`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Email"
+        <div className="relative mt-4 flex items-center gap-4 text-slate-300">
+          <button
+            type="button"
+            aria-label="Show email dialog"
+            onClick={() => {
+              setShowEmailDialog((prev) => !prev);
+              setCopied(false);
+            }}
             className="transition-colors hover:text-cyan-300"
           >
             <EmailIcon className="h-6 w-6" />
-          </a>
+          </button>
           <a
             href={profile.github}
             target="_blank"
@@ -113,6 +137,29 @@ export default function Contact() {
           >
             <PeerlistIcon className="h-6 w-6" />
           </a>
+
+          {showEmailDialog && (
+            <div className="absolute left-0 top-12 z-10 w-[260px] rounded-lg border border-white/15 bg-[#0d1425]/95 p-3 shadow-[0_12px_28px_rgba(0,0,0,0.45)] backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Email</p>
+              <p className="mt-1 text-sm text-slate-200">{profile.email}</p>
+              <div className="mt-3 flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={copyEmail}
+                  className="rounded-md border border-cyan-300/40 px-2.5 py-1.5 text-xs font-medium text-cyan-200 transition-colors hover:bg-cyan-400/15"
+                >
+                  {copied ? "Copied" : "Copy email"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowEmailDialog(false)}
+                  className="rounded-md border border-white/15 px-2.5 py-1.5 text-xs text-slate-300 transition-colors hover:text-white"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

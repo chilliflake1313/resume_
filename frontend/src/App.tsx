@@ -15,7 +15,7 @@ export default function App() {
       <Navbar />
 
       <div className="mx-auto max-w-5xl px-6 pt-[72px]">
-        <main className="hide-scrollbar h-[calc(100vh-72px)] snap-y snap-mandatory overflow-y-auto">
+        <main className="hide-scrollbar h-[calc(100vh-72px)] snap-y snap-proximity scroll-smooth overflow-y-auto">
           <Section id="about">
             <Bio />
           </Section>

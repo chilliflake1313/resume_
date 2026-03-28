@@ -1,10 +1,15 @@
 import { Card, CardContent } from "../components/ui/card";
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
     <div>
-      <h3 className="mb-4 text-xl font-semibold text-white">Projects</h3>
+      <TypewriterEffectSmooth
+        words={[{ text: "Projects", className: "text-white" }]}
+        className="mb-4 text-xl font-semibold"
+        cursorClassName="text-cyan-300"
+      />
 
       <div className="grid gap-4 md:grid-cols-2">
         {projects.map((p, i) => (

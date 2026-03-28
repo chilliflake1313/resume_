@@ -10,14 +10,14 @@ export default function Section({ id, children }: SectionProps) {
   return (
     <motion.section
       id={id}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      viewport={{ once: true }}
+      initial={{ opacity: 0.35, y: 26, scale: 0.985 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: false, amount: 0.45 }}
       className="snap-start"
     >
-      <div className="flex h-[calc(100vh-72px)] items-center py-6">
-        <div className="hide-scrollbar max-h-[calc(100vh-140px)] w-full overflow-y-auto rounded-2xl border border-white/12 bg-[#0f1424]/72 p-6 text-slate-100 shadow-[0_10px_35px_rgba(0,0,0,0.38)] backdrop-blur-md">
+      <div className="flex min-h-[calc(100vh-72px)] items-center py-6">
+        <div className="w-full rounded-2xl border border-white/12 bg-[#0f1424]/72 p-6 text-slate-100 shadow-[0_10px_35px_rgba(0,0,0,0.38)] backdrop-blur-md">
           {children}
         </div>
       </div>
