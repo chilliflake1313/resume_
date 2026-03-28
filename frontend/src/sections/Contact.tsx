@@ -84,9 +84,9 @@ export default function Contact() {
         Let&apos;s connect for backend, security, and collaboration opportunities.
       </p>
 
-      <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-4">
+      <div className="mt-4 p-1">
         <div className="flex items-center gap-4">
-          <div className="h-16 w-16 overflow-hidden rounded-md border border-white/15 bg-[#0c1120] shadow-sm">
+          <div className="h-16 w-16 overflow-hidden rounded-md bg-[#0c1120]/50">
             {profile.image ? (
               <img
                 src={profile.image}
