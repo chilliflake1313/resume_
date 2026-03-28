@@ -7,8 +7,8 @@ type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
 export function Badge({ className = "", variant = "default", ...props }: BadgeProps) {
   const variantClass =
     variant === "secondary"
-      ? "bg-gray-200 text-gray-700"
-      : "bg-blue-100 text-blue-700";
+      ? "border border-white/12 bg-white/8 text-slate-200"
+      : "border border-cyan-300/30 bg-cyan-400/15 text-cyan-200";
 
   return (
     <span
