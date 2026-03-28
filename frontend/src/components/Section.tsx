@@ -17,7 +17,7 @@ export default function Section({ id, children }: SectionProps) {
       className="snap-start"
     >
       <div className="flex h-[calc(100vh-72px)] items-center py-6">
-        <div className="max-h-[calc(100vh-140px)] w-full overflow-y-auto rounded-2xl border border-white/12 bg-[#0f1424]/72 p-6 text-slate-100 shadow-[0_10px_35px_rgba(0,0,0,0.38)] backdrop-blur-md">
+        <div className="hide-scrollbar max-h-[calc(100vh-140px)] w-full overflow-y-auto rounded-2xl border border-white/12 bg-[#0f1424]/72 p-6 text-slate-100 shadow-[0_10px_35px_rgba(0,0,0,0.38)] backdrop-blur-md">
           {children}
         </div>
       </div>

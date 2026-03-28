@@ -6,3 +6,12 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 96px;
 }
+
+.hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}

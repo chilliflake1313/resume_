@@ -33,8 +33,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#070b16]/70 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-center px-6 py-4">
+    <nav className="fixed left-0 top-0 z-50 w-full">
+      <div className="mx-auto flex max-w-5xl items-center justify-center px-6 pt-4">
         <div className="flex flex-wrap items-center justify-center gap-5 text-sm font-medium">
           {sections.map((id) => (
             <a
