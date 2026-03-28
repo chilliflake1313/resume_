@@ -4,13 +4,15 @@ import { experience } from "../data/experience";
 
 export default function Experience() {
   return (
-    <div>
+    <div className="mx-auto max-w-3xl">
       <TypewriterEffectSmooth
         words={[{ text: "Experience", className: "text-white" }]}
         className="mb-4 text-xl font-semibold"
         cursorClassName="text-cyan-300"
       />
-      <Timeline items={experience} />
+      <div className="mx-auto max-w-2xl text-left">
+        <Timeline items={experience} />
+      </div>
     </div>
   );
 }

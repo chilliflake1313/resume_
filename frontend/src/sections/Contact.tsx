@@ -74,7 +74,7 @@ export default function Contact() {
   };
 
   return (
-    <div>
+    <div className="mx-auto max-w-2xl">
       <TypewriterEffectSmooth
         words={[{ text: "Contact", className: "text-white" }]}
         className="mb-4 text-xl font-semibold"

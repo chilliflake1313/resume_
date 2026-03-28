@@ -16,8 +16,8 @@ export default function Section({ id, children }: SectionProps) {
       viewport={{ once: false, amount: 0.45 }}
       className="snap-start"
     >
-      <div className="flex min-h-[calc(100vh-72px)] items-center py-6">
-        <div className="w-full rounded-2xl border border-white/12 bg-[#0f1424]/72 p-6 text-slate-100 shadow-[0_10px_35px_rgba(0,0,0,0.38)] backdrop-blur-md">
+      <div className="flex min-h-[calc(100vh-72px)] items-center justify-center py-6">
+        <div className="w-full px-2 text-slate-100">
           {children}
         </div>
       </div>

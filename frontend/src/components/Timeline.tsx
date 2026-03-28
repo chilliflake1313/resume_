@@ -15,7 +15,7 @@ export default function Timeline({ items }: { items: Item[] }) {
           <div className="mt-1 h-3 w-3 rounded-full border-2 border-cyan-300 bg-[#0e1528]" />
 
           <div>
-            <div className="flex flex-wrap justify-between gap-2">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <span className="font-semibold text-slate-100">{i.title}</span>{" "}
                 <span className="text-cyan-300">@ {i.company}</span>

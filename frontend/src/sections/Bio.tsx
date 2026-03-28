@@ -2,7 +2,7 @@ import { EncryptedText } from "../components/ui/encrypted-text";
 
 export default function Bio() {
   return (
-    <div className="space-y-3">
+    <div className="mx-auto max-w-2xl space-y-3 text-center">
       <h2 className="text-4xl font-bold text-white">
         <EncryptedText text="Hi, I'm Ram." />
       </h2>
