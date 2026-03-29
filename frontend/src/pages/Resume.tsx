@@ -4,6 +4,7 @@ import SparklesBackground from "../components/SparklesBackground";
 
 import Bio from "../sections/Bio";
 import Contact from "../sections/Contact";
+import Education from "../sections/Education";
 import Experience from "../sections/Experience";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
@@ -18,6 +19,9 @@ export default function Resume() {
         <main className="hide-scrollbar h-[calc(100vh-72px)] snap-y snap-proximity scroll-smooth overflow-y-auto">
           <Section id="about">
             <Bio />
+          </Section>
+          <Section id="education">
+            <Education />
           </Section>
           <Section id="experience">
             <Experience />
