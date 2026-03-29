@@ -45,7 +45,7 @@ export function SparklesCore({
       const count = Math.max(30, Math.floor((area / 1100000) * particleDensity));
 
       particles = Array.from({ length: count }, () => {
-        const speed = 0.04 + Math.random() * 0.11;
+        const speed = (0.04 + Math.random() * 0.11) * 0.7;
         const angle = Math.random() * Math.PI * 2;
 
         return {

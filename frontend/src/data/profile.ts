@@ -3,7 +3,7 @@ export const profile = {
   image: "",
   role: "Backend Developer | Security Engineer | Learning",
   location: "India",
-  email: "ramkothari@gmail.com",
+  email: "ramkothari6891@gmail.com",
   github: "https://github.com/chilliflake1313",
   Peerlist: "https://peerlist.io/jobless",
 };
